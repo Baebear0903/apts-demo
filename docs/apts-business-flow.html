@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>APTS · 用户业务流转关系</title><style>*{box-sizing:border-box} :root{--paper:#f1f5f9;--surface:#fff;--ink:#0f172b;--muted:#64748b;--accent:#155dfc;--rule:#e2e8f0;--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.65}main{max-width:1378px;margin:0 auto;padding:48px 48px 64px;min-width:0}header{border-bottom:1px solid var(--rule);padding-bottom:32px;margin-bottom:32px}.eyebrow{font-family:var(--mono);color:var(--accent);font-size:12px;letter-spacing:.12em}h1{font-size:40px;line-height:1.3;margin:12px 0 16px;font-weight:600}header p{font-size:16px;max-width:900px;color:var(--muted);margin:0}nav{display:flex;flex-wrap:wrap;gap:24px;margin-top:24px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}section{margin:0 0 48px;scroll-margin-top:20px}.section-heading{display:flex;gap:20px;align-items:baseline;margin-bottom:8px}.number{font-family:var(--mono);font-size:14px;color:var(--muted)}h2{font-size:24px;margin:0;font-weight:600}.lead{margin:8px 0 24px;color:var(--muted);font-size:15px}.diagram-container{width:100%;max-width:100%;min-width:0;overflow-x:auto;border:1px solid var(--rule);border-radius:8px;background:#f1f5f9}svg{display:block;width:100%;height:auto;max-width:100%}svg text{font-family:var(--sans);fill:var(--ink)}.node{fill:#fff;stroke:#cbd5e1;stroke-width:1.5}.node.focal{fill:#eff6ff;stroke:#155dfc;stroke-width:1.5}.node.external{fill:#f8fafc;stroke:#94a3b8;stroke-dasharray:5 4}.tag-box{fill:#f8fafc;stroke:#e2e8f0;stroke-width:1}.tag{font-size:10px;fill:#64748b}.node-name{font-size:16px;font-weight:600}.body{font-size:12px;fill:#64748b}.edge-label{font-size:12px;fill:#64748b}.group{font-size:14px;font-weight:600}.legend{font-size:11px;fill:#64748b}.edge{fill:none;stroke:#64748b;stroke-width:1.5}.edge.view{stroke-dasharray:5 4}.edge.external{stroke:#1d4ed8;stroke-dasharray:5 4}.rule{stroke:#e2e8f0;stroke-width:1}.notes{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;margin-top:20px}.note{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:20px 24px}.note h3{font-size:15px;margin:0 0 8px}.note p{margin:0;color:var(--muted)}.note strong{color:var(--ink)}.note ul,.note ol{margin:0;padding-left:20px;color:var(--muted)}.boundary{padding:20px 24px;border-left:3px solid var(--accent);background:#fff;margin-top:20px}.boundary p{margin:0}details{border:1px solid var(--rule);border-radius:6px;background:#fff;padding:16px 24px;margin:16px 0}summary{cursor:pointer;font-weight:600}table{border-collapse:collapse;width:100%;font-size:13px;margin-top:16px}th,td{padding:12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}th{color:var(--muted);font-weight:500}code{font-family:var(--mono);font-size:12px;overflow-wrap:anywhere}.table-wrap{overflow-x:auto}footer{border-top:1px solid var(--rule);padding-top:20px;color:var(--muted);font-size:12px}@media(max-width:700px){main{padding:24px 16px}h1{font-size:28px}h2{font-size:20px}.notes{grid-template-columns:1fr}nav{gap:16px}.note{padding:16px}.table-wrap table{min-width:680px}}@media print{main{padding:0;max-width:none}header{padding-bottom:12px}nav{display:none}h1{font-size:28px}section{break-before:page;margin-bottom:0}.diagram-container{overflow-x:visible}svg{min-width:0}details{break-inside:avoid}.notes{gap:12px}.note{padding:12px}footer{margin-top:16px}}</style>
+</head>
+<body>
+<main>
+<header><div class="eyebrow">APTS / BUSINESS FLOW</div><h1>用户在各模块之间，如何完成业务</h1><p>围绕八个菜单，说明患者识别、人工复核、人群治理与数据开放的模块关系和两条主业务路径。</p><nav aria-label="图稿目录"><a href="#overview">01 模块关系</a><a href="#paths">02 两条主路径</a><a href="#support">03 后台支撑</a><a href="#evidence">业务口径</a></nav>
+</header>
+
+<section id="overview"><div class="section-heading"><span class="number">01</span><h2>模块关系：标签连接识别、人群与开放</h2></div><p class="lead">工作台是入口；患者画像是结果详情。核心业务产物在人群管理汇合，再供数据开放使用。</p><div class="diagram-container">
+<svg viewBox="0 0 1280 720" role="img" aria-labelledby="apts-business-flow-overview-title apts-business-flow-overview-desc"><title id="apts-business-flow-overview-title">前台模块之间如何流转</title><desc id="apts-business-flow-overview-desc">用户维护标签，选择周期扫描复核或主动圈选形成人群，随后配置数据开放，并从结果查看患者画像。</desc><defs><marker id="apts-business-flow-overview-solid" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker><marker id="apts-business-flow-overview-view" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker><marker id="apts-business-flow-overview-external" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#1d4ed8"/></marker></defs><rect width="1280" height="720" fill="#f1f5f9"/><g data-node="工作台 · 按权限进入各模块" data-box="64,40,1152,88"><rect x="64" y="40" width="1152" height="88" rx="6" fill="#f1f5f9"/><rect class="node" x="64" y="40" width="1152" height="88" rx="6"/><rect class="tag-box" x="80" y="52" width="40" height="20" rx="2"/><text x="88" y="66" class="tag" text-anchor="start">入口</text><text x="80" y="92" class="node-name" text-anchor="start">工作台 · 按权限进入各模块</text><text x="80" y="114" class="body" text-anchor="start">汇总业务规模、扫描待办与开放状态，事项回到所属模块处理。</text></g><path class="edge solid" d="M288 276 H376 Q384 276 384 268 V220 Q384 212 392 212 H416" marker-end="url(#apts-business-flow-overview-solid)"/><g data-label="周期扫描"><rect x="296" y="228" width="80" height="28" rx="2" fill="#f1f5f9"/><text x="336.0" y="247" class="edge-label" text-anchor="middle">周期扫描</text></g><path class="edge solid" d="M176 352 V484 Q176 492 184 492 H416" marker-end="url(#apts-business-flow-overview-solid)"/><g data-label="使用已发布标签"><rect x="212" y="456" width="176" height="28" rx="2" fill="#f1f5f9"/><text x="300.0" y="475" class="edge-label" text-anchor="middle">使用已发布标签</text></g><path class="edge solid" d="M528 264 V424" marker-end="url(#apts-business-flow-overview-solid)"/><g data-label="复核确认生成快照"><rect x="312" y="332" width="208" height="28" rx="2" fill="#f1f5f9"/><text x="416.0" y="351" class="edge-label" text-anchor="middle">复核确认生成快照</text></g><path class="edge view" d="M640 212 H752" marker-end="url(#apts-business-flow-overview-view)"/><g data-label="查看证据"><rect x="648" y="176" width="96" height="28" rx="2" fill="#f1f5f9"/><text x="696.0" y="195" class="edge-label" text-anchor="middle">查看证据</text></g><path class="edge view" d="M584 424 V344 Q584 336 592 336 H856 Q864 336 864 328 V264" marker-end="url(#apts-business-flow-overview-view)"/><g data-label="查看成员画像"><rect x="656" y="300" width="192" height="28" rx="2" fill="#f1f5f9"/><text x="752.0" y="319" class="edge-label" text-anchor="middle">查看成员画像</text></g><path class="edge solid" d="M640 492 H976" marker-end="url(#apts-business-flow-overview-solid)"/><g data-label="快照交付／订阅备案"><rect x="684" y="456" width="248" height="28" rx="2" fill="#f1f5f9"/><text x="808.0" y="475" class="edge-label" text-anchor="middle">快照交付／订阅备案</text></g><g data-node="标签中心" data-box="64,224,224,128"><rect x="64" y="224" width="224" height="128" rx="6" fill="#f1f5f9"/><rect class="node" x="64" y="224" width="224" height="128" rx="6"/><rect class="tag-box" x="80" y="236" width="40" height="20" rx="2"/><text x="88" y="250" class="tag" text-anchor="start">模块</text><text x="80" y="276" class="node-name" text-anchor="start">标签中心</text><text x="80" y="298" class="body" text-anchor="start">指标规则 · 试算 · 发布</text><text x="80" y="318" class="body" text-anchor="start">授权科室 · 扫描周期</text></g><g data-node="扫描中心" data-box="416,160,224,104"><rect x="416" y="160" width="224" height="104" rx="6" fill="#f1f5f9"/><rect class="node" x="416" y="160" width="224" height="104" rx="6"/><rect class="tag-box" x="432" y="172" width="40" height="20" rx="2"/><text x="440" y="186" class="tag" text-anchor="start">模块</text><text x="432" y="212" class="node-name" text-anchor="start">扫描中心</text><text x="432" y="234" class="body" text-anchor="start">最新批次 · 复核 · 历史</text></g><g data-node="患者画像" data-box="752,160,224,104"><rect x="752" y="160" width="224" height="104" rx="6" fill="#f1f5f9"/><rect class="node" x="752" y="160" width="224" height="104" rx="6"/><rect class="tag-box" x="768" y="172" width="76" height="20" rx="2"/><text x="776" y="186" class="tag" text-anchor="start">上下文详情</text><text x="768" y="212" class="node-name" text-anchor="start">患者画像</text><text x="768" y="234" class="body" text-anchor="start">来源条件 · 身份 · 证据</text></g><g data-node="人群管理" data-box="416,424,224,136"><rect x="416" y="424" width="224" height="136" rx="6" fill="#f1f5f9"/><rect class="node focal" x="416" y="424" width="224" height="136" rx="6"/><rect class="tag-box" x="432" y="436" width="40" height="20" rx="2"/><text x="440" y="450" class="tag" text-anchor="start">模块</text><text x="432" y="476" class="node-name" text-anchor="start">人群管理</text><text x="432" y="498" class="body" text-anchor="start">主动圈选 · 动态人群</text><text x="432" y="518" class="body" text-anchor="start">确认／查看／派生快照</text></g><g data-node="数据开放" data-box="976,424,240,136"><rect x="976" y="424" width="240" height="136" rx="6" fill="#f1f5f9"/><rect class="node focal" x="976" y="424" width="240" height="136" rx="6"/><rect class="tag-box" x="992" y="436" width="40" height="20" rx="2"/><text x="1000" y="450" class="tag" text-anchor="start">模块</text><text x="992" y="476" class="node-name" text-anchor="start">数据开放</text><text x="992" y="498" class="body" text-anchor="start">数据集交付／标签订阅</text><text x="992" y="518" class="body" text-anchor="start">确认导出／发布修订</text></g><text x="64" y="616" class="body" text-anchor="start">计算范围：全院有院区就诊记录的患者，按主患者标识去重；授权科室不裁剪名单。</text><line x1="64" y1="672" x2="1216" y2="672" class="rule"/><path d="M64 696 H104" class="edge solid" marker-end="url(#apts-business-flow-overview-solid)"/><text x="116" y="700" class="legend" text-anchor="start">业务依赖／结果流转</text><path d="M432 696 H472" class="edge view" marker-end="url(#apts-business-flow-overview-view)"/><text x="484" y="700" class="legend" text-anchor="start">查看上下文详情；可返回来源</text>
+</svg></div><div class="notes"><div class="note"><h3>用户怎样使用</h3><p>标签维护人员配置规则，运营人员复核扫描或主动圈选，具备相应权限者确认并导出数据集交付，或登记并维护标签订阅备案。职责由统一门户角色组合，可由同一用户承担。</p></div><div class="note"><h3>怎样读箭头</h3><p>实线表示业务依赖或产物传递，虚线表示查看患者上下文。扫描确认生成的快照在人群管理中复用，画像提供来源条件和证据。</p></div></div>
+</section>
+
+<section id="paths"><div class="section-heading"><span class="number">02</span><h2>业务路径：固定快照交付与标签订阅备案</h2></div><p class="lead">标签发布后可按周期扫描，也可主动圈选。圈选条件可保存为动态人群，非空结果可直接确认快照；快照用于数据集交付；动态人群用于登记订阅的线下约定。</p><div class="diagram-container">
+<svg viewBox="0 0 1280 720" role="img" aria-labelledby="apts-business-flow-paths-title apts-business-flow-paths-desc"><title id="apts-business-flow-paths-title">两条业务路径与两类开放来源</title><desc id="apts-business-flow-paths-desc">周期扫描经复核形成固定快照，主动圈选可直接确认快照或保存动态人群，快照用于固定交付，动态人群用于标签订阅备案。</desc><defs><marker id="apts-business-flow-paths-solid" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker><marker id="apts-business-flow-paths-view" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker><marker id="apts-business-flow-paths-external" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#1d4ed8"/></marker></defs><rect width="1280" height="720" fill="#f1f5f9"/><text x="96" y="196" class="group" text-anchor="start">A · 周期扫描与复核</text><text x="928" y="196" class="group" text-anchor="start">B · 主动圈选</text><path class="edge solid" d="M600 128 V164 Q600 172 592 172 H248 Q240 172 240 180 V220" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="按配置周期扫描"><rect x="320" y="136" width="192" height="28" rx="2" fill="#f1f5f9"/><text x="416.0" y="155" class="edge-label" text-anchor="middle">按配置周期扫描</text></g><path class="edge solid" d="M680 128 V152 Q680 160 688 160 H1032 Q1040 160 1040 168 V220" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="用户选择纳入／排除"><rect x="768" y="124" width="248" height="28" rx="2" fill="#f1f5f9"/><text x="892.0" y="143" class="edge-label" text-anchor="middle">用户选择纳入／排除</text></g><path class="edge solid" d="M240 308 V408" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="最新非空未确认"><rect x="248" y="336" width="176" height="28" rx="2" fill="#f1f5f9"/><text x="336" y="355" class="edge-label" text-anchor="middle">最新非空未确认</text></g><path class="edge solid" d="M352 452 H528" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="保留人数大于零"><rect x="360" y="416" width="160" height="28" rx="2" fill="#f1f5f9"/><text x="440.0" y="435" class="edge-label" text-anchor="middle">保留人数大于零</text></g><path class="edge solid" d="M928 264 H752" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="保存动态条件"><rect x="760" y="228" width="160" height="28" rx="2" fill="#f1f5f9"/><text x="840" y="247" class="edge-label" text-anchor="middle">保存动态条件</text></g><path class="edge solid" d="M640 308 V408" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="确认固定成员"><rect x="464" y="336" width="168" height="28" rx="2" fill="#f1f5f9"/><text x="548.0" y="355" class="edge-label" text-anchor="middle">确认固定成员</text></g><path class="edge solid" d="M752 280 H800 Q808 280 808 288 V352 a8 8 0 0 0 0 16 V444 a8 8 0 0 0 0 16 V612 Q808 620 800 620 H752" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="以动态人群登记约定"><rect x="816" y="548" width="248" height="28" rx="2" fill="#f1f5f9"/><text x="940.0" y="567" class="edge-label" text-anchor="middle">以动态人群登记约定</text></g><path class="edge solid" d="M752 452 H928" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="选择快照"><rect x="840" y="416" width="80" height="28" rx="2" fill="#f1f5f9"/><text x="880.0" y="435" class="edge-label" text-anchor="middle">选择快照</text></g><path class="edge solid" d="M1040 308 V352 Q1040 360 1032 360 H720 Q712 360 712 368 V408" marker-end="url(#apts-business-flow-paths-solid)"/><g data-label="直接确认快照"><rect x="836" y="324" width="176" height="28" rx="2" fill="#f1f5f9"/><text x="924" y="343" class="edge-label" text-anchor="middle">直接确认快照</text></g><g data-node="已发布可用标签" data-box="528,40,224,88"><rect x="528" y="40" width="224" height="88" rx="20" fill="#f1f5f9"/><rect class="node" x="528" y="40" width="224" height="88" rx="20"/><rect class="tag-box" x="544" y="52" width="40" height="20" rx="2"/><text x="552" y="66" class="tag" text-anchor="start">起点</text><text x="544" y="92" class="node-name" text-anchor="start">已发布可用标签</text></g><g data-node="全院扫描批次" data-box="128,220,224,88"><rect x="128" y="220" width="224" height="88" rx="6" fill="#f1f5f9"/><rect class="node" x="128" y="220" width="224" height="88" rx="6"/><rect class="tag-box" x="144" y="232" width="64" height="20" rx="2"/><text x="152" y="246" class="tag" text-anchor="start">系统计算</text><text x="144" y="272" class="node-name" text-anchor="start">全院扫描批次</text><text x="144" y="294" class="body" text-anchor="start">保存命中名单与证据</text></g><g data-node="标签纳排圈选" data-box="928,220,224,88"><rect x="928" y="220" width="224" height="88" rx="6" fill="#f1f5f9"/><rect class="node" x="928" y="220" width="224" height="88" rx="6"/><rect class="tag-box" x="944" y="232" width="64" height="20" rx="2"/><text x="952" y="246" class="tag" text-anchor="start">用户操作</text><text x="944" y="272" class="node-name" text-anchor="start">标签纳排圈选</text><text x="944" y="294" class="body" text-anchor="start">纳入全满足，排除任一</text></g><g data-node="动态人群" data-box="528,220,224,88"><rect x="528" y="220" width="224" height="88" rx="6" fill="#f1f5f9"/><rect class="node" x="528" y="220" width="224" height="88" rx="6"/><rect class="tag-box" x="544" y="232" width="64" height="20" rx="2"/><text x="552" y="246" class="tag" text-anchor="start">人群管理</text><text x="544" y="272" class="node-name" text-anchor="start">动态人群</text><text x="544" y="294" class="body" text-anchor="start">保存条件；可手动刷新</text></g><g data-node="复核并一次性确认" data-box="128,408,224,88"><rect x="128" y="408" width="224" height="88" rx="6" fill="#f1f5f9"/><rect class="node" x="128" y="408" width="224" height="88" rx="6"/><rect class="tag-box" x="144" y="420" width="64" height="20" rx="2"/><text x="152" y="434" class="tag" text-anchor="start">用户操作</text><text x="144" y="460" class="node-name" text-anchor="start">复核并一次性确认</text><text x="144" y="482" class="body" text-anchor="start">查看／移除／撤销移除</text></g><g data-node="已确认固定快照" data-box="528,408,224,88"><rect x="528" y="408" width="224" height="88" rx="6" fill="#f1f5f9"/><rect class="node focal" x="528" y="408" width="224" height="88" rx="6"/><rect class="tag-box" x="544" y="420" width="64" height="20" rx="2"/><text x="552" y="434" class="tag" text-anchor="start">人群管理</text><text x="544" y="460" class="node-name" text-anchor="start">已确认固定快照</text><text x="544" y="482" class="body" text-anchor="start">原件不变；调整须派生</text></g><g data-node="数据集交付" data-box="928,408,224,88"><rect x="928" y="408" width="224" height="88" rx="6" fill="#f1f5f9"/><rect class="node" x="928" y="408" width="224" height="88" rx="6"/><rect class="tag-box" x="944" y="420" width="64" height="20" rx="2"/><text x="952" y="434" class="tag" text-anchor="start">数据开放</text><text x="944" y="460" class="node-name" text-anchor="start">数据集交付</text><text x="944" y="482" class="body" text-anchor="start">确认锁列；首次导出冻结</text></g><g data-node="标签订阅备案" data-box="528,584,224,72"><rect x="528" y="584" width="224" height="72" rx="6" fill="#f1f5f9"/><rect class="node focal" x="528" y="584" width="224" height="72" rx="6"/><rect class="tag-box" x="544" y="596" width="64" height="20" rx="2"/><text x="552" y="610" class="tag" text-anchor="start">数据开放</text><text x="544" y="636" class="node-name" text-anchor="start">标签订阅备案</text></g><line x1="64" y1="672" x2="1216" y2="672" class="rule"/><path d="M64 696 H104" class="edge solid" marker-end="url(#apts-business-flow-paths-solid)"/><text x="116" y="700" class="legend" text-anchor="start">箭头表示动作产生／使用的业务对象</text>
+</svg></div>
+<div class="notes">
+  <div class="note"><h3>固定快照 → 数据集交付</h3><ol>
+    <li>以已确认快照创建草稿，填写业务信息，选择交付列并预览。</li>
+    <li>确认后锁定来源和列；首次成功导出 CSV 后冻结成员、列和值。</li>
+    <li>已交付可重复下载原件。软删除停止展示和下载，保留固定结果供审计。</li>
+  </ol></div>
+  <div class="note"><h3>动态人群 → 标签订阅备案</h3><ol>
+    <li>选择动态人群和已对接系统，登记使用方、用途、提供方式、期限和输出列。</li>
+    <li>发布后如有变更，填写原因并重新发布；在同一记录查看修订。</li>
+    <li>APTS 完成约定留存。实际数据提供由底座线下实现，备案的发布与修订不改变其运行状态。</li>
+  </ol></div>
+</div>
+<div class="boundary"><p><strong>圈选与确认：</strong>动态人群可仅保存条件，已有对应成功计算时同时保留完整结果。非空结果可直接确认快照；人工移除只影响本次快照。扫描复核全移除时只留零人确认记录。快照原件固定，调整须生成派生快照。</p></div>
+
+</section>
+
+<section id="support">
+<div class="section-heading"><span class="number">03</span><h2>后台支撑：同步结构、维护指标与登记系统</h2></div>
+<p class="lead">全院通用库与患者运营库分别组织数据与指标。结构同步不复制患者数据，指标配置由 APTS 独立维护。</p>
+<div class="diagram-container">
+
+<svg viewBox="0 0 1280 720" role="img" aria-labelledby="support-title support-desc">
+<title id="support-title">后台支撑与外部职责</title>
+<desc id="support-desc">底座结构经数据集供指标绑定，指标用于标签规则和交付列。已对接系统提供标签订阅备案选项，实际订阅由底座线下实现。</desc>
+<defs><marker id="support-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker></defs>
+<rect width="1280" height="720" fill="#f1f5f9"/>
+<text class="group" x="384" y="176">登记与订阅</text>
+<text class="group" x="1008" y="176">APTS 之外</text>
+<text class="group" x="64" y="404">从数据结构到标签规则</text>
+<path class="edge solid" d="M608 256 H704" marker-end="url(#support-arrow)"/>
+<text class="edge-label" x="656.0" y="242" text-anchor="middle">供选择</text>
+<path class="edge solid" d="M288 484 H384" marker-end="url(#support-arrow)"/>
+<text class="edge-label" x="336.0" y="470" text-anchor="middle">同步结构</text>
+<path class="edge solid" d="M608 484 H704" marker-end="url(#support-arrow)"/>
+<text class="edge-label" x="656.0" y="470" text-anchor="middle">字段绑定</text>
+<path class="edge solid" d="M928 484 H1008" marker-end="url(#support-arrow)"/>
+<text class="edge-label" x="968.0" y="470" text-anchor="middle">可检索</text>
+<g data-node="统一门户 · 提供身份、科室和功能权限" data-box="64,40,1152,88">
+  <rect x="64" y="40" width="1152" height="88" rx="6" fill="#f1f5f9"/>
+  <rect class="node" x="64" y="40" width="1152" height="88" rx="6"/>
+  <rect class="tag-box" x="80" y="52" width="64" height="20" rx="2"/>
+  <text class="tag" x="88" y="66">权限前提</text>
+  <text class="node-name" x="80" y="92">统一门户 · 提供身份、科室和功能权限</text>
+  <text class="body" x="80" y="114">APTS 校验菜单和操作权限；使用标签另校验授权科室，计算仍覆盖全院患者。</text>
+</g>
+<g data-node="已对接系统" data-box="384,204,224,104">
+  <rect x="384" y="204" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node" x="384" y="204" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="400" y="216" width="64" height="20" rx="2"/>
+  <text class="tag" x="408" y="230">后台登记</text>
+  <text class="node-name" x="400" y="256">已对接系统</text>
+  <text class="body" x="400" y="278">系统及联系人、默认使用方</text>
+</g>
+<g data-node="标签订阅备案" data-box="704,204,224,104">
+  <rect x="704" y="204" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node focal" x="704" y="204" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="720" y="216" width="100" height="20" rx="2"/>
+  <text class="tag" x="728" y="230">APTS 记录</text>
+  <text class="node-name" x="720" y="256">标签订阅备案</text>
+  <text class="body" x="720" y="278">发布约定、保留修订</text>
+</g>
+<g data-node="底座线下订阅" data-box="1008,204,224,104">
+  <rect x="1008" y="204" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node external" x="1008" y="204" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="1024" y="216" width="64" height="20" rx="2"/>
+  <text class="tag" x="1032" y="230">外部职责</text>
+  <text class="node-name" x="1024" y="256">底座线下订阅</text>
+  <text class="body" x="1024" y="278">视图、接口及实际提供</text>
+</g>
+<g data-node="数据底座" data-box="64,432,224,104">
+  <rect x="64" y="432" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node external" x="64" y="432" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="80" y="444" width="64" height="20" rx="2"/>
+  <text class="tag" x="88" y="458">数据来源</text>
+  <text class="node-name" x="80" y="484">数据底座</text>
+  <text class="body" x="80" y="506">患者数据与结构元数据</text>
+</g>
+<g data-node="数据集" data-box="384,432,224,104">
+  <rect x="384" y="432" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node" x="384" y="432" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="400" y="444" width="64" height="20" rx="2"/>
+  <text class="tag" x="408" y="458">后台模块</text>
+  <text class="node-name" x="400" y="484">数据集</text>
+  <text class="body" x="400" y="506">同步表、视图和字段结构</text>
+</g>
+<g data-node="指标库" data-box="704,432,224,104">
+  <rect x="704" y="432" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node" x="704" y="432" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="720" y="444" width="64" height="20" rx="2"/>
+  <text class="tag" x="728" y="458">后台模块</text>
+  <text class="node-name" x="720" y="484">指标库</text>
+  <text class="body" x="720" y="506">字段绑定、检索与导出配置</text>
+</g>
+<g data-node="标签中心" data-box="1008,432,224,104">
+  <rect x="1008" y="432" width="224" height="104" rx="6" fill="#f1f5f9"/>
+  <rect class="node" x="1008" y="432" width="224" height="104" rx="6"/>
+  <rect class="tag-box" x="1024" y="444" width="64" height="20" rx="2"/>
+  <text class="tag" x="1032" y="458">前台模块</text>
+  <text class="node-name" x="1024" y="484">标签中心</text>
+  <text class="body" x="1024" y="506">定义患者识别逻辑</text>
+</g>
+<text class="body" x="704" y="568">可导出指标另供数据集交付选择，与可检索资格独立。</text>
+<line x1="64" y1="672" x2="1216" y2="672" class="rule"/>
+<path class="edge solid" d="M64 696 H104" marker-end="url(#support-arrow)"/>
+<text x="116" y="700" class="legend">箭头表示 APTS 的选择或配置依赖；虚线边框表示 APTS 之外。</text>
+
+</svg>
+</div>
+<div class="notes">
+  <div class="note"><h3>结构和指标变化</h3><p>同步变更或表级删除使绑定字段失效时保留原绑定、提示影响，相关新计算被阻断；关闭可见或可检索开关不阻断已发布标签；历史批次、已确认快照和固定交付结果保留。</p></div>
+  <div class="note"><h3>登记状态的作用</h3><p>新登记或换系统时只能选择登记有效的系统。停用登记不改变既有订阅、数据集交付或底座实际订阅。</p></div>
+</div>
+<div class="boundary"><p><strong>职责边界：</strong>APTS 在系统内完成复核、快照、CSV 交付及订阅备案。线下订阅由底座实现。患者服务由外部系统执行；反馈经底座接入后可作为后续计算数据。</p></div>
+
+</section>
+
+<section id="evidence">
+<div class="section-heading"><span class="number">04</span><h2>业务口径与访问边界</h2></div>
+<div class="table-wrap"><table><thead><tr><th>对象</th><th>业务口径</th></tr></thead><tbody>
+<tr><td>标签与计算范围</td><td>基础标签使用指标条件（支持数据范围条件、纳入／排除标准与事件筛选）；复合标签可引用已发布基础标签并组合指标条件。原始计算底池为各院区有就诊记录患者的并集，按主患者标识去重。授权科室控制标签使用资格。</td></tr>
+<tr><td>扫描批次</td><td>保存计算时规则、原始命中名单与证据。仅最新成功、非空、尚未确认的批次可复核。成功零人只留执行历史，失败独立记录。</td></tr>
+<tr><td>动态人群与快照</td><td>动态人群保存可复用条件，纳入全命中、排除任一命中即剔除。非空结果才能确认快照；快照固定成员、来源条件与证据。</td></tr>
+<tr><td>数据集交付状态</td><td>草稿可编辑和预览；已确认锁定类型、来源和列；已交付可重复下载首次固定结果。删除后停止前台展示和下载。</td></tr>
+<tr><td>固定交付字段</td><td>必选主患者标识、患者姓名、快照标识、快照确认时间。可追加可用且可导出的指标。首次导出时失效列保留、值留空；重复下载不重取。</td></tr>
+<tr><td>标签订阅备案</td><td>状态为草稿、已发布；重新发布保留修改原因和当次变更。约定期限只供登记，实际订阅由底座线下提供。</td></tr>
+</tbody></table></div>
+<div class="notes">
+  <div class="note"><h3>权限与撤权</h3><p>撤销科室标签授权阻止该用户的新标签使用及相关扫描明细访问。人群、快照和开放记录按门户功能权限访问；责任组织只用于登记。</p></div>
+  <div class="note"><h3>历史与复核</h3><p>历史保留计算时条件和证据。“当前已不满足”只辅助复核，不自动移除患者。规则、授权和数据变化不改写历史快照、固定交付及订阅修订。</p></div>
+</div>
+
+</section>
+
+<footer>APTS 患者标签画像服务 · 业务流转 · 2026-11-22<br>本图说明模块职责、操作顺序和业务对象关系。
+</footer>
+</main>
+</body></html>
